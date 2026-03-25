@@ -1,0 +1,8 @@
+CREATE TABLE customers
+(
+    id              TEXT PRIMARY KEY UNIQUE  NOT NULL,
+    credit_modifier INTEGER                  NOT NULL DEFAULT 100,
+    has_debt        BOOLEAN                  NOT NULL DEFAULT FALSE,
+    created_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    modified_at     TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
