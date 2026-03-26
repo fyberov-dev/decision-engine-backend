@@ -32,6 +32,12 @@ Build project using Gradle
 ./gradlew build -x test
 ```
 
+Create external docker network
+
+```shell
+docker network create inbank_solution_backend
+```
+
 Run Docker
 
 ```shell

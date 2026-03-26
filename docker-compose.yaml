@@ -4,8 +4,12 @@ services:
     image: postgres:latest
     env_file:
       - .env
+    networks:
+      - inbank_solution_backend
     ports:
       - "5432:5432"
+    volumes:
+      - inbank_solution_db:/var/lib/postgresql
 
   backend:
     container_name: inbank-solution-backend
@@ -16,7 +20,16 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
     env_file:
       - .env
+    networks:
+      - inbank_solution_backend
     ports:
       - "8080:8080"
     depends_on:
       - db
+
+networks:
+  inbank_solution_backend:
+    external: true
+
+volumes:
+  inbank_solution_db:
