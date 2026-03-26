@@ -2,6 +2,8 @@
 
 An API built with Spring Boot 4 for making loan decisions.
 
+After set up, install https://github.com/fyberov-dev/decision-engine-frontend
+
 ## Tech Stack
 
 | Technology        | Version |
